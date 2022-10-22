@@ -1,0 +1,66 @@
+@use "../../../mixin" as *;
+@use "../../../setting" as *;
+
+.p-privacy {
+  padding-bottom: 160px;
+
+  @include mq(tab) {
+    margin-top: -90px;
+  }
+
+  @include mq(sp) {
+    margin-top: -200px;
+  }
+}
+
+.p-privacy__content {
+  padding: 50px 0;
+  text-align: center;
+
+  @include mq(tab) {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+
+.p-privacy__text {
+  display: inline-block;
+  text-align: left;
+  text-align: justify;
+  width: 890px;
+
+  @include mq(tab) {
+    width: 100%;
+  }
+
+  @include mq(sp) {
+    margin-top: 10px;
+  }
+}
+
+.p-privacy__list {
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 90px;
+
+  @include mq(tab) {
+    margin-left: 20px;
+  }
+}
+
+//「お問い合せ」スタイル
+.p-privacy__contact > .p-privacy__list {
+  list-style-type: none;
+  margin-top: 40px;
+  margin-left: 67px;
+
+  a {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  @include mq(tab) {
+    margin-left: 0px;
+  }
+}

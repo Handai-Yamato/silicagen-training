@@ -1,0 +1,63 @@
+@use "../../setting" as *;
+@use "../../mixin" as *;
+
+/*--------------------------------
+	h2 見出し
+--------------------------------*/
+.c-heading-2 {
+  color: $color-heading-2;
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  font-weight: 300;
+  position: relative;
+  margin-bottom: 70px;
+
+  @include mq(sp) {
+    margin-bottom: 45px;
+    font-size: calc(3.3rem + ((1vw - 0.32rem) * 3.54167)); //viewport 320px(font-size:33px)以上800px（font-size:50px）以下可変
+  }
+
+  span {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 2px;
+
+    @include mq(sp) {
+      margin-top: 10px;
+      font-size: calc(1.6rem + ((1vw - 0.32rem) * 0.8333)); //viewport 320px(font-size:26px)以上800px（font-size:35px）以下可変
+    }
+  }
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 10%;
+    border: none;
+    height: 2px;
+    background: $color-heading-2;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/*--------------------------------
+	h3 見出し
+--------------------------------*/
+.c-heading-3 {
+  color: $color-heading-3;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.2em;
+  line-height: 3.333;
+  font-weight: 400;
+
+  @include mq(sp) {
+    font-size: calc(2.6rem + ((1vw - 0.32rem) * 2.9167)); //viewport 800px（font-size:40px）以上320px(font-size:26px)以下可変
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,28 @@
+@mixin mq($point) {
+	
+	@if $point == tab {
+		@media (max-width: 1024px) {
+			@content;
+		}
+	}
+
+	@if $point == sp {
+		@media (max-width: 800px) {
+			@content;
+		}
+	}
+
+	@if $point == sp-2 {
+		@media (max-width: 599px) {
+			@content;
+		}
+	}
+
+}
+
+@include mq(tab) {
+}
+@include mq(sp) {
+}
+@include mq(sp-2) {
+}

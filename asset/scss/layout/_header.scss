@@ -1,0 +1,163 @@
+@use "../mixin" as *;
+@use "../setting" as *;
+
+/*********************************
+	ヘッダー共通設定
+*********************************/
+.l-header {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+
+  @include mq(sp) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+//ヘッダーとヘッダーロゴ上下入れ替え
+.order1 {
+  @include mq(sp) {
+    order: 1;
+  }
+}
+
+.order2 {
+  @include mq(sp) {
+    order: 2;
+  }
+}
+
+.l-header__logo {
+  text-align: center;
+  background: #fff;
+  padding: 5px;
+
+  img {
+    height: 115px;
+
+    @include mq(tab) {
+      height: 90px;
+      margin: 0 auto;
+    }
+
+    @include mq(sp) {
+      height: 75px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.l-header__inner {
+  background: -moz-linear-gradient(-0.16% 50% 0deg, rgba(148, 207, 191, 1) 0%, rgba(108, 140, 193, 1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(148, 207, 191, 1) 0%, rgba(108, 140, 193, 1) 100%);
+  background: -webkit-gradient(linear, -0.16% 50%, 99.84% 50%, color-stop(0, rgba(148, 207, 191, 1)), color-stop(1, rgba(108, 140, 193, 1)));
+  background: -o-linear-gradient(0deg, rgba(148, 207, 191, 1) 0%, rgba(108, 140, 193, 1) 100%);
+  background: -ms-linear-gradient(0deg, rgba(148, 207, 191, 1) 0%, rgba(108, 140, 193, 1) 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#94CFBF', endColorstr='#6C8CC1' ,GradientType=0)";
+  background: linear-gradient(90deg, rgba(148, 207, 191, 1) 0%, rgba(108, 140, 193, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#94CFBF', endColorstr='#6C8CC1', GradientType=1);
+
+  @include mq(tab) {
+    padding: 0;
+  }
+}
+
+.l-header__menu-pc {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  @include mq(tab) {
+    padding: 0;
+  }
+
+  @include mq(sp) {
+    display: none; //sp時ハンバーガーメニューに切り替え
+  }
+}
+
+.l-header__list {
+  height: 100px;
+  list-style-type: none;
+  font-size: 2.3rem;
+  letter-spacing: 0.1em;
+  color: $color-header-text;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  @include mq(tab) {
+    font-size: 2rem;
+  }
+
+  @include mq(sp) {
+    height: 50px;
+  }
+}
+
+.l-header__item {
+  a {
+    color: inherit;
+    position: relative;
+    display: inline;
+    text-decoration: none;
+
+    span {
+      display: block;
+    }
+
+    span + span {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+.l-header__item:hover {
+  span {
+    text-decoration: underline;
+  }
+}
+
+.l-header__logo img,
+.l-header__item {
+  &:hover {
+    transition: all 0.3s ease 0s;
+    transform: scale(1.1);
+  }
+}
+
+/*********************************
+	ハンバーガーメニューの設定
+*********************************/
+.l-header__hamburger {
+  display: none;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  margin: 0 0 0 auto;
+  width: 40px;
+  height: 60px;
+
+  @include mq(sp) {
+    display: block;
+  }
+}
+
+.l-header__list-sp {
+  li {
+    padding: 20px;
+    a {
+      & > span {
+        font-size: calc(1.7rem + (1vw - 0.32rem) * 1.6667); /* 画面幅320px(17px)以上800px(25px)以下可変 */
+      }
+
+      span + span {
+        font-size: calc(1.3rem + (1vw - 0.32rem) * 0.83333); /* 画面幅320px以上800px以下可変 */
+      }
+    }
+  }
+}
+
+
+

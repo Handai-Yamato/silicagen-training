@@ -1,0 +1,207 @@
+@use "../../../mixin" as *;
+@use "../../../setting" as *;
+
+/*********************************
+	top
+*********************************/
+.p-top {
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  position: relative;
+  margin-top: -238px;
+
+  @include mq(tab) {
+    margin-top: -278px;
+  }
+
+  @include mq(sp) {
+    margin-top: -318px;
+  }
+}
+
+/*********************************
+	Welcome note
+*********************************/
+.p-message {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+
+  @include mq(tab) {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  @include mq(sp-2) {
+    padding-bottom: 70px;
+  }
+}
+
+.p-message__img {
+  width: calc(100% + 256px); //128pxはみ出させる
+  margin: 0 -128px;
+
+  img {
+    width: 100%;
+  }
+
+  @include mq(sp) {
+    width: calc(100% + 20px); //10pxはみ出させる
+    margin: 0 -10px;
+  }
+}
+
+.p-message__title {
+  font-size: 4rem;
+  margin-top: 100px;
+  color: $color-accent;
+
+  @include mq(sp) {
+    font-size: calc(1.9rem + ((1vw - 0.32rem) * 3.33333)); //viewport 320px(font-size:19px)以上800px（font-size:35px）以下可変
+  }
+
+  @include mq(sp-2) {
+    margin-top: 50px;
+  }
+}
+
+.p-message__text {
+  margin-top: 50px;
+
+  @include mq(sp) {
+    text-align: left;
+    text-align: justify;
+    margin-top: 25px;
+  }
+
+  @include mq(sp-2) {
+    font-size: 1.6rem;
+  }
+}
+
+.p-message__button {
+  display: inline-block;
+  font-size: 30px;
+  width: 450px;
+  letter-spacing: 0.2em;
+  color: $color-accent;
+  border: 2px solid $color-accent;
+  padding: 15px 10px;
+  margin-top: 50px;
+  font-weight: bold;
+
+  &:visited {
+    color: $color-accent;
+  }
+
+  @include mq(sp) {
+    width: 62.6%;
+    font-size: calc(1.8rem + ((1vw - 0.32rem) * 2.5));
+  }
+}
+
+/*********************************
+	What's new
+*********************************/
+
+.p-info {
+  background: $color-base2;
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  padding-top: 80px;
+  padding-right: 5%;
+  padding-bottom: 100px;
+  padding-left: 5%;
+
+  @include mq(tab) {
+    font-size: 1.8rem;
+    font-size: calc(1.6rem + ((1vw - 0.32rem) * 0.4167)); /* 画面幅320px以上800px以下可変 */
+  }
+
+  @include mq(sp) {
+  }
+}
+
+.p-info__menu {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+
+  @include mq(tab) {
+    width: 100%;
+  }
+}
+
+// 最上部の要素のみborder-topを指定
+.p-info__menu > .p-info__box1 {
+  border-top: 1px dashed $color-accent;
+}
+
+.p-info__box {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+  border-bottom: 1px dashed $color-accent;
+  position: relative;
+
+  span {
+    display: inline-block;
+    position: absolute;
+    right: 25px;
+    @include vertical-centering();
+  }
+
+  @include mq(sp-2) {
+    display: block;
+
+    span {
+      transform: unset;
+    }
+  }
+
+  &:nth-child(odd) {
+    background: #eaeef6;
+  }
+
+  dt {
+    letter-spacing: 0.2em;
+
+    &::after {
+      @include pseudo("");
+      background: url("#{$img-path}home_info_new.png") no-repeat;
+      width: 75px;
+      height: 25px;
+      left: 160px;
+      @include vertical-centering(); //天地中央配置
+
+      @include mq(tab) {
+        left: 150px;
+      }
+      @include mq(sp) {
+        left: 145px;
+      }
+      @include mq(sp-2) {
+        top: 35px;
+      }
+    }
+    a {
+      color: $color-text1;
+      position: relative;
+    }
+  }
+
+  dd {
+    margin-left: 115px;
+    padding-right: 45px;
+
+    a {
+      color: $color-text1;
+    }
+
+    @include mq(sp-2) {
+      margin-left: 10px;
+      margin-top: 10px;
+      padding-right: 0;
+    }
+  }
+}

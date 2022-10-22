@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お問い合わせ | 株式会社シリカジェン</title>
+    <link rel="icon" href="../asset/img/favicon.ico" />
+    <link rel="stylesheet" href="../asset/css/style.min.css?ver=1.0.3" />
+  </head>
+
+  <body>
+    <header class="l-header">
+      <div class="l-header__logo order2">
+        <a href="../index.html"><img src="../asset/img/header_logo.svg" alt="株式会社シリカジェン" /></a>
+      </div>
+      <div class="l-header__inner order1">
+        <nav class="l-header__menu-pc">
+          <ul class="l-header__list">
+            <li class="l-header__item">
+              <a href="../index.html"><span>Home</span><span>ホーム</span></a>
+            </li>
+            <li class="l-header__item">
+              <a href="../profile/profile.html"><span>Corporate&ensp;Profile</span><span>会社概要</span></a>
+            </li>
+            <li class="l-header__item">
+              <a href="../technology/technology.html"><span>Technology</span><span>超越技術について</span></a>
+            </li>
+            <li class="l-header__item">
+              <a href="../privacy/privacy.html"><span>Privacy&ensp;Policy</span><span>プライバシーポリシー</span></a>
+            </li>
+            <li class="l-header__item">
+              <a href="./contact.html"><span>Contact</span><span>お問い合せ</span></a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- sp ハンバーガー -->
+        <div class="l-header__hamburger">
+          <div class="l-header__icon js-hamburger is-show">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <nav class="l-header__menu-sp js-gnav-sp is-show">
+          <ul class="l-header__list-sp js-gnav-list">
+            <li class="l-header__item">
+              <a href="../index.html"><span>Home</span><span>ホーム</span></a>
+            </li>
+            <li class="l-header__item">
+              <a href="../profile/profile.html"><span>Corporate&ensp;Profile</span><span>会社概要</span></a>
+            </li>
+            <li class="l-header__item">
+              <a href="../technology/technology.html"><span>Technology</span><span>超越技術について</span></a>
+            </li>
+            <li class="l-header__item">
+              <a href="../privacy/privacy.html"><span>Privacy&ensp;Policy</span><span>プライバシーポリシー</span></a>
+            </li>
+            <li class="l-header__item">
+              <a href="./contact.html"><span>Contact</span><span>お問い合せ</span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- /.l-header -->
+
+    <div class="l-wrap">
+      <main class="l-main">
+        <div class="l-main__inner">
+          <div class="p-contact">
+            <h2 class="c-heading-2">Contact<span>お問い合わせ</span></h2>
+            <p>
+              当サイトをご覧いただきありがとうございます。<br />
+              当サイトに関するお問い合わせは下記フォームをご利用ください。<br />
+              <br class="u-br-pc u-br-tab" />
+              ※こちらはお問い合わせ用のフォームとなります。
+            </p>
+
+            <div class="p-form">
+              <form
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSctDJwARKkE58RGi4_NOwhi1y4irY4RHOdNpfilvzTCI1Y7xg/formResponse"
+                method="post"
+                target="hidden_iframe"
+                onsubmit="submitted=true;"
+              >
+                <div class="p-form__container">
+                  <label for="" class="p-form__label">会社名・団体名</label>
+                  <br />
+                  <input class="p-form__text" type="text" autocomplete="organization" name="entry.710979730" />
+                </div>
+                <div class="p-form__container">
+                  <label for="" class="p-form__label">お名前（漢字）&ensp;※必須</label>
+                  <br />
+                  <input class="p-form__text" type="text" autocomplete="name" name="entry.1180624989" required />
+                </div>
+                <div class="p-form__container">
+                  <label for="" class="p-form__label">お名前（フリガナ）&ensp;※必須</label>
+                  <br />
+                  <input class="p-form__text" type="text" autocomplete="name" required name="entry.645595430" />
+                </div>
+                <div class="p-form__container">
+                  <label for="" class="p-form__label">メールアドレス&ensp;※必須</label>
+                  <br />
+                  <input class="p-form__text" type="email" autocomplete="email" name="entry.170306440" required />
+                </div>
+                <div class="p-form__container">
+                  <label for="" class="p-form__label">電話番号</label>
+                  <br />
+                  <input class="p-form__text" type="tel" autocomplete="tel" name="entry.2004656261" />
+                </div>
+                <div class="p-form__container">
+                  <label for="" class="p-form__label">お問い合わせ内容&ensp;※必須</label>
+                  <br />
+                  <textarea class="p-form__text contact" name="entry.1625266816" rows="”3″" cols="”20″" wrap="”hard”" required></textarea>
+                </div>
+
+                <button class="p-form__button" name="button" type="submit">送信する&ensp;&Gt;</button>
+              </form>
+
+              <!-- サンクスページへ遷移 -->
+              <script type="text/javascript">
+                var submitted = false;
+              </script>
+              <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='thanks.html';}"></iframe>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- /.l-main -->
+    </div>
+    <!-- /.l-wrap -->
+
+    <!-- ページトップボタン -->
+    <div class="c-page-top js-scroll-top">
+      <a href=""><img src="../asset/img/page-top-arrow.svg" alt="ページトップボタン" width="26" height="34" viewBox="0 0 26 34" /></a>
+    </div>
+
+    <footer class="l-footer">
+      <div class="l-footer__inner">
+        <div class="l-footer__logo">
+          <a href="../index.html"><img src="../asset/img/footer-logo.svg" width="375" height="84.13" viewBox="0 0 375 84.13" alt="" /></a>
+        </div>
+        <nav class="l-footer__menu">
+          <ul class="l-footer__list">
+            <li class="l-footer__item l-footer__item-1">
+              <a href="../index.html">ホーム</a>
+            </li>
+            <li class="l-footer__item">
+              <a href="../profile/profile.html">会社概要</a>
+            </li>
+            <li class="l-footer__item">
+              <a href="../technology/technology.html">超越技術について</a>
+            </li>
+            <li class="l-footer__item">
+              <a href="../privacy/privacy.html">プライバシーポリシー</a>
+            </li>
+            <li class="l-footer__item">
+              <a href="./contact.html">お問い合わせ</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="l-footer__copyright">
+          <small>&copy;&emsp;株式会社&emsp;シリカジェン</small>
+        </div>
+      </div>
+    </footer>
+    <!-- /.l-footer -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../asset/js/hamburger.js?ver=1.0.1"></script>
+    <script src="../asset/js/scroll-top.js?ver=1.0.1"></script>
+  </body>
+</html>

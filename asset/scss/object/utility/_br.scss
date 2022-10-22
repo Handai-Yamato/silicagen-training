@@ -1,0 +1,28 @@
+@use "../../mixin" as *;
+
+.u-br-pc {
+  @include mq(tab) {
+    display: none;
+  }
+}
+
+.u-br-tab {
+  display: block;
+  @include mq(sp) {
+    display: none;
+  }
+}
+
+.u-br-sp {
+  display: none;
+  @include mq(sp) {
+    display: block;
+  }
+}
+
+.u-br-sp-2 {
+  display: none;
+  @include mq(sp-2) {
+    display: block;
+  }
+}

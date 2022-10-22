@@ -1,0 +1,7 @@
+
+// 疑似要素
+@mixin pseudo($content: '', $position: absolute, $display: block) {
+    position: $position;
+    display: $display;
+    content: $content;
+}

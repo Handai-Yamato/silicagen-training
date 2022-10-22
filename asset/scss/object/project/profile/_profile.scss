@@ -1,0 +1,253 @@
+@use "../../../mixin" as *;
+@use "../../../setting" as *;
+
+/*********************************
+	Corporate Profile
+*********************************/
+.p-profile {
+  color: $color-accent;
+  text-align: center;
+
+  @include mq(tab) {
+    margin-top: -90px;
+  }
+
+  @include mq(sp) {
+    margin-top: -200px;
+  }
+}
+
+.p-profile__inner {
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  @include mq(tab) {
+    padding-top: 50px;
+    padding-right: 5%;
+    padding-bottom: 50px;
+    padding-left: 5%;
+  }
+
+  @include mq(sp) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.p-profile__text {
+  font-size: 4rem;
+  padding-top: 70px;
+  padding-bottom: 90px;
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  @include bg-image($filename: profile_img);
+
+  @include mq(sp) {
+    display: none;
+  }
+}
+
+.p-profile__text-sp {
+  display: none;
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+
+  @include mq(tab) {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  @include mq(sp) {
+    display: block;
+    font-size: 4rem;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include bg-image($filename: profile_img-sp);
+  }
+}
+
+.p-profile__text-head {
+  font-size: 3rem;
+  font-weight: 400;
+
+  @include mq(sp) {
+    font-size: calc(2rem + ((1vw - 0.32rem) * 2.08333)); //viewport 320px(font-size:20px)以上800px（font-size:30px）以下可変
+  }
+}
+
+.p-profile__text-head + p {
+  margin-top: 50px;
+  font-weight: 700;
+  font-family: $top-font;
+
+  @include mq(sp) {
+    margin-top: 25px;
+    font-size: calc(2.4rem + ((1vw - 0.32rem) * 3.3333)); //viewport 320px(font-size:24px)以上800px（font-size:40px）以下可変
+  }
+}
+
+/*********************************
+	Mission
+*********************************/
+.p-mission {
+  text-align: center;
+
+  @include mq(sp) {
+    text-align: unset;
+  }
+}
+
+/*********************************
+	Value
+*********************************/
+.p-value {
+  text-align: center;
+
+  @include mq(sp) {
+    text-align: unset;
+  }
+}
+
+/*********************************
+	Vision
+*********************************/
+.p-vision {
+  text-align: center;
+
+  @include mq(sp) {
+    text-align: unset;
+  }
+}
+
+/*********************************
+	Corporate information
+*********************************/
+.p-c-info {
+  padding-top: 90px;
+  padding-bottom: 100px;
+  background: $color-base2;
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+
+  @include mq(tab) {
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+
+  @include mq(sp) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.p-c-info__menu {
+  font-family: $sub-font;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+// 最上部の要素のみborder-topを指定
+.p-c-info__menu > .p-c-info__box1 {
+  border-top: 1px dashed $color-accent;
+}
+
+.p-c-info__box {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2em;
+  padding-top: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px dashed $color-accent;
+  background: $color-base1;
+
+  &:nth-child(odd) {
+    background: #eaeef6;
+  }
+
+  @include mq(sp) {
+    display: block;
+    padding-top: 10px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    text-align: unset;
+
+    span {
+      transform: unset;
+    }
+  }
+
+  @include mq(sp-2) {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  dt {
+    color: $color-accent;
+    font-weight: 500;
+    text-align: center;
+    width: 300px;
+
+    @include mq(sp) {
+      text-align: unset;
+      width: 100%;
+    }
+  }
+
+  dd {
+    width: calc(100% - 300px);
+    border-left: 1px solid $color-text1;
+    color: $color-text1;
+    padding-left: 25px;
+
+    @include mq(sp) {
+      width: 100%;
+      border: none;
+      padding-left: 0;
+    }
+
+    ol {
+      margin-left: 35px;
+      text-align: justify;
+
+      @include mq(sp) {
+        padding-right: 0;
+        margin-left: 6.5%;
+      }
+
+      @include mq(sp-2) {
+        margin-left: 25px;
+      }
+    }
+  }
+}
+
+/*********************************
+	Access
+*********************************/
+.p-access {
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.p-access__map {
+  position: relative;
+  height: 0;
+  padding-top: 500px; //ここに指定したい高さを入れる
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+
+  @include mq(sp) {
+    padding-top: 85%;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

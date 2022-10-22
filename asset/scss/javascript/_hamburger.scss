@@ -1,0 +1,76 @@
+@use "../mixin" as *;
+@use "../setting" as *;
+
+/*------ ハンバーガーアイコンの設定 -------*/
+.js-hamburger.is-show {
+  span {
+    position: absolute;
+    left: -10px;
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 8px;
+    transition: ease 0.75s;
+  }
+
+  span:nth-of-type(1) {
+    top: 16px;
+  }
+
+  span:nth-of-type(2) {
+    top: 28px;
+  }
+
+  span:nth-of-type(3) {
+    bottom: 16px;
+  }
+}
+
+.js-hamburger.is-show-done {
+  span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 28px;
+  }
+
+  span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+  }
+}
+
+/*------ sp ヘッダーメニュー -------*/
+.js-gnav-sp.is-show {
+  left: 0px;
+  position: absolute;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: -120%;
+  left: 0;
+  color: $color-header-text;
+  background: -moz-linear-gradient(-0.16% 50% 0deg, rgba(148, 207, 191, 1) 0%, rgba(108, 140, 193, 1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(148, 207, 191, 1) 0%, rgba(108, 140, 193, 1) 100%);
+  background: -webkit-gradient(linear, -0.16% 50%, 99.84% 50%, color-stop(0, rgba(148, 207, 191, 1)), color-stop(1, rgba(108, 140, 193, 1)));
+  background: -o-linear-gradient(0deg, rgba(148, 207, 191, 1) 0%, rgba(108, 140, 193, 1) 100%);
+  background: -ms-linear-gradient(0deg, rgba(148, 207, 191, 1) 0%, rgba(108, 140, 193, 1) 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#94CFBF', endColorstr='#6C8CC1' ,GradientType=0)";
+  background: linear-gradient(90deg, rgba(148, 207, 191, 1) 0%, rgba(108, 140, 193, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#94CFBF', endColorstr='#6C8CC1', GradientType=1);
+
+  ul {
+    flex-direction: column;
+
+    li {
+      text-align: center;
+      border-top: 1px solid #fff;
+    }
+  }
+}
+
+.js-gnav-sp.is-show-done {
+  top: 60px;
+}

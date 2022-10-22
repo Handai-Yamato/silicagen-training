@@ -1,0 +1,10 @@
+@use "../mixin" as *;
+@use "../setting" as *;
+
+.l-wrap {
+  padding-top: 338px;
+
+  @include mq(tab) {
+    padding-top: 378px;
+  }
+}
